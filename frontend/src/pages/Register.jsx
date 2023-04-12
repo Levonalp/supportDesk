@@ -1,4 +1,8 @@
-function register() {
-  return <div>My register</div>;
+function Register() {
+  return (
+    <div>
+      <h1> My Register </h1>
+    </div>
+  );
 }
-export default register;
+export default Register;
