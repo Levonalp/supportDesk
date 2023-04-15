@@ -10,7 +10,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
   
       "build": "npm install --prefix frontend && npm run build --prefix frontend"},
-  "author": "Brad Traversy",
+  "author": "Levon Alshabi",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
