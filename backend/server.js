@@ -6,7 +6,13 @@ const { errorHandler } = require("./middleware/errorMiddleware");
 const connectDB = require("./config/db");
 const PORT = process.env.PORT || 5000;
 const cors = require("cors"); // Add this line
-app.use(cors());
+
+const corsOptions = {
+  origin: "https://lasupportdesk.onrender.com/",
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 // Connect to database
 connectDB();
