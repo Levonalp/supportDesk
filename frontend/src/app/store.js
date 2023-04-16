@@ -1,15 +1,12 @@
-const express = require("express");
-const router = express.Router();
-const {
-  registerUser,
-  loginUser,
-  getMe,
-} = require("../controllers/userController");
+import { configureStore } from "@reduxjs/toolkit";
+import authReducer from "../features/auth/authSlice";
+import ticketReducer from "../features/tickets/ticketSlice";
+import noteReducer from "../features/notes/noteSlice";
 
-const { protect } = require("../middleware/authMiddleware");
-
-router.post("/", registerUser);
-router.post("/login", loginUser);
-router.get("/me", protect, getMe);
-
-module.exports = router;
+export const store = configureStore({
+  reducer: {
+    auth: authReducer,
+    tickets: ticketReducer,
+    notes: noteReducer,
+  },
+});
