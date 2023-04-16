@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "/api/tickets/";
+const API_URL = process.env.REACT_APP_N_URL || "/api/notes/";
 
 // Get ticket notes
 const getNotes = async (ticketId, token) => {
