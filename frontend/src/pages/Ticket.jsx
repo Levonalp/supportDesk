@@ -70,7 +70,7 @@ function Ticket() {
       .catch(toast.error);
   };
 
-  // Open/close modal
+  // Open/close modals
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
 
@@ -99,13 +99,11 @@ function Ticket() {
         </div>
         <h2>Notes</h2>
       </header>
-
       {ticket.status !== "closed" && (
         <button onClick={openModal} className="btn">
           <FaPlus /> Add Note
         </button>
       )}
-
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -134,13 +132,11 @@ function Ticket() {
           </div>
         </form>
       </Modal>
-
       {notes ? (
         notes.map((note) => <NoteItem key={note._id} note={note} />)
       ) : (
         <Spinner />
       )}
-
       {ticket.status !== "closed" && (
         <button onClick={onTicketClose} className="btn btn-block btn-danger">
           Close Ticket
