@@ -57,6 +57,7 @@ const closeTicket = async (ticketId, token) => {
 
   return response.data;
 };
+// Export all functions
 
 const ticketService = {
   createTicket,
