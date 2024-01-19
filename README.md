@@ -20,5 +20,5 @@ Contributing
 Contributions, issues, and feature requests are welcome. Feel free to open an issue or create a pull request.
 
 License
-This project is licensed under the MIT License. See the LICENSE file for more information...
+This project is licensed under the MIT License. See the LICENSE file for more information.
 
